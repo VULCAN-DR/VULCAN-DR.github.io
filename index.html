@@ -309,9 +309,8 @@
     </div>
 
     <p class="has-text-centered is-size-7 mt-4">
-      Compared to normal environments, fire-induced smoke and hazards significantly
-      alter agent trajectories and coordination patterns, underscoring the necessity
-      of hazard-aware cooperative planning.
+      All experiments are conducted in the Habitat simulator. Open-vocabulary object detection and class-agnostic segmentation are implemented using YOLOv8 and Mobile-SAM, respectively.
+      For global coordination, a vision–language model (GPT-4o) assigns frontier goals based on the current multi-agent state. All experiments use two robots per episode with shared start positions but different initial orientations.
     </p>
   </div>
 </section>
@@ -332,13 +331,11 @@
       <img src="static/images/evaluation_results.png"
            alt="Evaluation results comparing VULCAN with baseline methods">
       <figcaption class="has-text-centered is-size-7 mt-2">
+        We evaluate all methods using four metrics: Number of Steps (NS), Success Rate (SR), Success weighted by Path Length (SPL), and Cumulative Hazard Exposure (CHE).
         By comparing the performance of each method across normal and fire scenarios, we observe substantial performance degradation for existing approaches originally designed for clean indoor environments. This highlights the critical need for robust multi-modal perception and hazard-aware planning in fire-disaster response applications.
       </figcaption>
     </figure>
 
-    <p class="has-text-centered is-size-7 mt-4">
-      We evaluate all methods using four metrics: Number of Steps (NS), Success Rate (SR), Success weighted by Path Length (SPL), and Cumulative Hazard Exposure (CHE).
-    </p>
 
     <!-- Degradation Analysis -->
     <div class="mt-6">
