@@ -127,10 +127,72 @@
   </div>
 </section>
 
+<!-- Perception Degradation -->
+<section class="section is-light">
+  <div class="container is-max-desktop">
+    <h2 class="title is-3 has-text-centered">
+      Perception Degradation under Fire-Induced Smoke
+    </h2>
+
+    <p class="has-text-centered mb-5">
+      Fire-induced smoke severely degrades multi-modal perception in indoor environments.
+      Using Gazebo-based fire simulations with a high-fidelity physics engine and
+      particle-emitter support, we qualitatively demonstrate modality-dependent
+      perception degradation under increasing smoke density.
+    </p>
+
+    <!-- 2x2 视频布局 -->
+    <div class="columns is-multiline is-centered">
+
+      <div class="column is-half">
+        <video autoplay muted loop controls>
+          <source src="static/videos/rgb.mp4" type="video/mp4">
+        </video>
+        <p class="has-text-centered is-size-7">
+          RGB Camera
+        </p>
+      </div>
+
+      <div class="column is-half">
+        <video autoplay muted loop controls>
+          <source src="static/videos/depth.mp4" type="video/mp4">
+        </video>
+        <p class="has-text-centered is-size-7">
+          Depth Camera
+        </p>
+      </div>
+
+      <div class="column is-half">
+        <video autoplay muted loop controls>
+          <source src="static/videos/thermal.mp4" type="video/mp4">
+        </video>
+        <p class="has-text-centered is-size-7">
+          Thermal Camera
+        </p>
+      </div>
+
+      <div class="column is-half">
+        <video autoplay muted loop controls>
+          <source src="static/videos/lidar_scene.mp4" type="video/mp4">
+        </video>
+        <p class="has-text-centered is-size-7">
+          Lidar Sensor
+        </p>
+      </div>
+
+    </div>
+
+    <p class="has-text-centered is-size-7 mt-4">
+      Modality-dependent perception degradation under increasing smoke density in simulated indoor fire environments.
+    </p>
+  </div>
+</section>
+
+
 <!-- Demo -->
 <section class="section">
   <div class="container is-max-desktop">
-    <h2 class="title is-3 has-text-centered">Demo</h2>
+    <h2 class="title is-3 has-text-centered">Multi-agent Cooperative Navigation under Fire and Normal Conditions</h2>
 
     <!-- 第一行 -->
     <div class="columns is-multiline">
@@ -139,7 +201,7 @@
           <source src="static/videos/no_fire_episode_4_rank_0_agent_0.mp4" type="video/mp4">
         </video>
         <p class="has-text-centered is-size-7">
-          Single-agent navigation (normal)
+          Agent_0_view (normal)
         </p>
       </div>
 
@@ -148,7 +210,7 @@
           <source src="static/videos/no_fire_episode_4_rank_0_agent_1.mp4" type="video/mp4">
         </video>
         <p class="has-text-centered is-size-7">
-          Single-agent navigation (fire)
+          Agent_1_view (normal)
         </p>
       </div>
 
@@ -157,7 +219,7 @@
           <source src="static/videos/no_fire_episode_4_rank_0_merged.mp4" type="video/mp4">
         </video>
         <p class="has-text-centered is-size-7">
-          Multi-agent baseline
+          coooperative route planning (normal)
         </p>
       </div>
 
@@ -167,7 +229,7 @@
           <source src="static/videos/episode_4_rank_0_agent_0.mp4" type="video/mp4">
         </video>
         <p class="has-text-centered is-size-7">
-          VULCAN (normal)
+          Agent_0_view (fire)
         </p>
       </div>
 
@@ -176,7 +238,7 @@
           <source src="static/videos/episode_4_rank_0_agent_1.mp4" type="video/mp4">
         </video>
         <p class="has-text-centered is-size-7">
-          VULCAN (fire)
+          Agent_1_view (fire)
         </p>
       </div>
 
@@ -185,7 +247,7 @@
           <source src="static/videos/episode_4_rank_0_merged.mp4" type="video/mp4">
         </video>
         <p class="has-text-centered is-size-7">
-          Failure case analysis
+          coooperative route planning (fire)
         </p>
       </div>
     </div>
