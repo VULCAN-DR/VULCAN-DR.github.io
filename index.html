@@ -192,65 +192,82 @@
 <!-- Demo -->
 <section class="section">
   <div class="container is-max-desktop">
-    <h2 class="title is-3 has-text-centered">Multi-agent Cooperative Navigation under Fire and Normal Conditions</h2>
+    <h2 class="title is-3 has-text-centered">
+      Multi-Agent Cooperative Navigation under Normal and Fire Conditions
+    </h2>
 
-    <!-- 第一行 -->
+    <p class="has-text-centered mb-5">
+      We qualitatively compare multi-agent navigation behaviors under normal and
+      fire-induced environments. The results highlight the impact of fire hazards
+      on individual agent perception and cooperative route planning.
+    </p>
+
     <div class="columns is-multiline">
-      <div class="column is-one-third">
+
+      <!-- 第一行：Agent 0 -->
+      <div class="column is-half">
         <video autoplay muted loop controls preload="metadata">
           <source src="static/videos/no_fire_episode_4_rank_0_agent_0.mp4" type="video/mp4">
         </video>
         <p class="has-text-centered is-size-7">
-          Agent_0_view (normal)
+          Agent 0 View (Normal Environment)
         </p>
       </div>
 
-      <div class="column is-one-third">
-        <video autoplay muted loop controls>
-          <source src="static/videos/no_fire_episode_4_rank_0_agent_1.mp4" type="video/mp4">
-        </video>
-        <p class="has-text-centered is-size-7">
-          Agent_1_view (normal)
-        </p>
-      </div>
-
-      <div class="column is-one-third">
-        <video autoplay muted loop controls>
-          <source src="static/videos/no_fire_episode_4_rank_0_merged.mp4" type="video/mp4">
-        </video>
-        <p class="has-text-centered is-size-7">
-          coooperative route planning (normal)
-        </p>
-      </div>
-
-      <!-- 第二行 -->
-      <div class="column is-one-third">
-        <video autoplay muted loop controls>
+      <div class="column is-half">
+        <video autoplay muted loop controls preload="metadata">
           <source src="static/videos/episode_4_rank_0_agent_0.mp4" type="video/mp4">
         </video>
         <p class="has-text-centered is-size-7">
-          Agent_0_view (fire)
+          Agent 0 View (Fire Environment)
         </p>
       </div>
 
-      <div class="column is-one-third">
-        <video autoplay muted loop controls>
+      <!-- 第二行：Agent 1 -->
+      <div class="column is-half">
+        <video autoplay muted loop controls preload="metadata">
+          <source src="static/videos/no_fire_episode_4_rank_0_agent_1.mp4" type="video/mp4">
+        </video>
+        <p class="has-text-centered is-size-7">
+          Agent 1 View (Normal Environment)
+        </p>
+      </div>
+
+      <div class="column is-half">
+        <video autoplay muted loop controls preload="metadata">
           <source src="static/videos/episode_4_rank_0_agent_1.mp4" type="video/mp4">
         </video>
         <p class="has-text-centered is-size-7">
-          Agent_1_view (fire)
+          Agent 1 View (Fire Environment)
         </p>
       </div>
 
-      <div class="column is-one-third">
-        <video autoplay muted loop controls>
+      <!-- 第三行：Cooperative Route Planning 对比 -->
+      <div class="column is-half">
+        <video autoplay muted loop controls preload="metadata">
+          <source src="static/videos/no_fire_episode_4_rank_0_merged.mp4" type="video/mp4">
+        </video>
+        <p class="has-text-centered is-size-7">
+          Cooperative Route Planning (Normal Environment)
+        </p>
+      </div>
+
+      <div class="column is-half">
+        <video autoplay muted loop controls preload="metadata">
           <source src="static/videos/episode_4_rank_0_merged.mp4" type="video/mp4">
         </video>
         <p class="has-text-centered is-size-7">
-          coooperative route planning (fire)
+          Cooperative Route Planning (Fire Environment)
         </p>
       </div>
+
     </div>
+
+    <p class="has-text-centered is-size-7 mt-4">
+      Compared to normal environments, fire-induced smoke and hazards significantly
+      alter agent trajectories and coordination patterns, underscoring the necessity
+      of hazard-aware cooperative planning.
+    </p>
   </div>
 </section>
 
