@@ -325,28 +325,43 @@
     </h2>
 
     <p class="has-text-centered mb-5">
-      We evaluate VULCAN in simulated indoor environments under both normal and
-      fire-induced conditions, focusing on navigation effectiveness, robustness,
-      and cooperative efficiency in the presence of severe perceptual degradation.
+      We evaluate representative multi-agent, map-based navigation baselines, including both VLM-based planners and conventional map-based methods, under normal conditions and simulated indoor fire conditions to assess their navigation success rate, exploration efficiency, and safety awareness. The quantitative results are summarized in Table I and Table II.
     </p>
 
     <figure class="image has-text-centered">
       <img src="static/images/evaluation_results.png"
            alt="Evaluation results comparing VULCAN with baseline methods">
       <figcaption class="has-text-centered is-size-7 mt-2">
-        Quantitative comparison of VULCAN against representative multi-agent
-        navigation baselines under normal and fire-driven environments.
-        Fire scenarios lead to significant performance degradation for
-        vision-based methods, while VULCAN maintains higher success rates
-        and improved coordination efficiency.
+        By comparing the performance of each method across normal and fire scenarios, we observe substantial performance degradation for existing approaches originally designed for clean indoor environments. This highlights the critical need for robust multi-modal perception and hazard-aware planning in fire-disaster response applications.
       </figcaption>
     </figure>
 
     <p class="has-text-centered is-size-7 mt-4">
-      Metrics include success rate, path efficiency, and exploration coverage, averaged over multiple randomized episodes.
+      We evaluate all methods using four metrics: Number of Steps (NS), Success Rate (SR), Success weighted by Path Length (SPL), and Cumulative Hazard Exposure (CHE).
     </p>
+
+    <!-- Degradation Analysis -->
+    <div class="mt-6">
+      <h3 class="title is-4 has-text-centered">
+        Performance Degradation Analysis under Fire-driven Scenarios
+      </h3>
+
+      <p class="has-text-centered mb-5">
+        We further analyze the underlying causes of the observed performance degradation under fire-driven scenarios. Our analysis reveals that perception uncertainty, incomplete map construction, and hazard-unaware decision making jointly contribute to navigation failures in smoke-filled and thermally hazardous environments.
+      </p>
+
+      <figure class="image has-text-centered">
+        <img src="static/images/results_analysis.png"
+             alt="Analysis of performance degradation causes under fire scenarios">
+        <figcaption class="has-text-centered is-size-7 mt-2">
+          The comparison highlights three failure modes: (a, d) Perception failure: smoke causes missed detections (confidence drop in a) and false positives (hallucinations in d); (b, e) Inefficient exploration: agents exhibit redundant framing and reduced coverage under fire conditions; (c, f) Unsafe planning: without hazard awareness, agents plan paths through high-risk zones (f) despite the presence of thermal hazards shown in the ground-truth map (c).
+        </figcaption>
+      </figure>
+    </div>
+
   </div>
 </section>
+
 
 
 <!-- BibTeX
