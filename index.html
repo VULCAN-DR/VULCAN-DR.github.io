@@ -105,7 +105,7 @@
   </div>
 </section>
 
-<!-- Teaser -->
+<!-- Teaser
 <section class="hero teaser">
   <div class="container is-max-desktop">
     <video autoplay muted loop controls>
@@ -115,7 +115,21 @@
       Multi-agent cooperative navigation in a simulated indoor fire environment with smoke, heat, and sensor degradation.
     </p>
   </div>
+</section> -->
+
+
+<!-- Teaser -->
+<section class="hero teaser">
+  <div class="container is-max-desktop has-text-centered">
+    <figure class="image">
+      <img src="static/images/scenario.png" alt="Multi-agent cooperative navigation in indoor fire environments">
+    </figure>
+    <p class="has-text-centered">
+      Multi-agent cooperative navigation in a simulated indoor fire environment with smoke, heat, and sensor degradation.
+    </p>
+  </div>
 </section>
+
 
 <!-- Abstract -->
 <section class="section is-light">
@@ -126,6 +140,33 @@
     </p>
   </div>
 </section>
+
+<!-- System Design -->
+<section class="section">
+  <div class="container is-max-desktop">
+    <h2 class="title is-3 has-text-centered">
+      System Design Overview
+    </h2>
+
+    <p class="has-text-centered mb-5">
+      VULCAN is a hazard-aware multi-agent navigation framework that integrates
+      multi-modal perception, vision–language reasoning, and cooperative planning
+      to enable robust operation in indoor fire-disaster environments.
+    </p>
+
+    <figure class="image has-text-centered">
+      <img src="static/images/System Design.png"
+           alt="System design overview of the VULCAN framework">
+      <figcaption class="has-text-centered is-size-7 mt-2">
+        Overview of the VULCAN system architecture. Multi-modal sensory inputs are
+        processed to construct a hazard-aware representation, which is then
+        integrated with vision–language reasoning to guide cooperative
+        multi-agent planning and execution.
+      </figcaption>
+    </figure>
+  </div>
+</section>
+
 
 <!-- Perception Degradation -->
 <section class="section is-light">
@@ -267,6 +308,39 @@
       Compared to normal environments, fire-induced smoke and hazards significantly
       alter agent trajectories and coordination patterns, underscoring the necessity
       of hazard-aware cooperative planning.
+    </p>
+  </div>
+</section>
+
+
+<!-- Evaluation -->
+<section class="section is-light">
+  <div class="container is-max-desktop">
+    <h2 class="title is-3 has-text-centered">
+      Evaluation
+    </h2>
+
+    <p class="has-text-centered mb-5">
+      We evaluate VULCAN in simulated indoor environments under both normal and
+      fire-induced conditions, focusing on navigation effectiveness, robustness,
+      and cooperative efficiency in the presence of severe perceptual degradation.
+    </p>
+
+    <figure class="image has-text-centered">
+      <img src="static/images/evaluation_results.png"
+           alt="Evaluation results comparing VULCAN with baseline methods">
+      <figcaption class="has-text-centered is-size-7 mt-2">
+        Quantitative comparison of VULCAN against representative multi-agent
+        navigation baselines under normal and fire-driven environments.
+        Fire scenarios lead to significant performance degradation for
+        vision-based methods, while VULCAN maintains higher success rates
+        and improved coordination efficiency.
+      </figcaption>
+    </figure>
+
+    <p class="has-text-centered is-size-7 mt-4">
+      Metrics include success rate, path efficiency, and exploration coverage,
+      averaged over multiple randomized episodes.
     </p>
   </div>
 </section>
