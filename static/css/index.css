@@ -283,6 +283,22 @@ body {
   height: auto;
 }
 
+/* Demo section video styling */
+.section video {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: var(--border-radius-lg);
+  box-shadow: var(--shadow-md);
+  transition: var(--transition);
+  background-color: #000;
+}
+
+.section video:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-lg);
+}
+
 .results-carousel .subtitle {
   font-size: 1rem !important;
   color: var(--text-secondary);
