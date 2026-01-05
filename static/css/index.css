@@ -292,11 +292,30 @@ body {
   box-shadow: var(--shadow-md);
   transition: var(--transition);
   background-color: #000;
+  max-width: 100%;
+  margin: 0 auto;
 }
 
 .section video:hover {
   transform: translateY(-2px);
   box-shadow: var(--shadow-lg);
+}
+
+/* Demo section column styling */
+.section .column {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+
+.section .column video {
+  flex: 1;
+  object-fit: contain;
+}
+
+.section .column p {
+  margin-top: 1rem;
+  margin-bottom: 0;
 }
 
 .results-carousel .subtitle {
