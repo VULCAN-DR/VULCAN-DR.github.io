@@ -327,14 +327,112 @@
       We evaluate representative multi-agent, map-based navigation baselines, including both VLM-based planners and conventional map-based methods, under normal conditions and simulated indoor fire conditions to assess their navigation success rate, exploration efficiency, and safety awareness. The quantitative results are summarized in Table I and Table II.
     </p>
 
-    <figure class="image has-text-centered">
-      <img src="static/images/evaluation_results.png"
-           alt="Evaluation results comparing VULCAN with baseline methods">
-      <figcaption class="has-text-centered is-size-7 mt-2">
-        We evaluate all methods using four metrics: Number of Steps (NS), Success Rate (SR), Success weighted by Path Length (SPL), and Cumulative Hazard Exposure (CHE).
-        By comparing the performance of each method across normal and fire scenarios, we observe substantial performance degradation for existing approaches originally designed for clean indoor environments. This highlights the critical need for robust multi-modal perception and hazard-aware planning in fire-disaster response applications.
-      </figcaption>
-    </figure>
+<figure class="has-text-centered">
+
+  <!-- Normal Condition Table -->
+  <table class="table is-bordered is-striped is-hoverable is-narrow is-fullwidth">
+    <caption class="has-text-centered is-size-7 mb-2">
+      <strong>Table 1.</strong> Performance comparison under normal conditions
+    </caption>
+    <thead>
+      <tr>
+        <th>Method</th>
+        <th>NS</th>
+        <th>SR</th>
+        <th>SPL</th>
+        <th>CHE</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Greedy</td>
+        <td>219.03</td>
+        <td>0.686</td>
+        <td>0.322</td>
+        <td>0</td>
+      </tr>
+      <tr>
+        <td>Cost-Utility</td>
+        <td>199.60</td>
+        <td>0.628</td>
+        <td>0.315</td>
+        <td>0</td>
+      </tr>
+      <tr>
+        <td>Random Sample</td>
+        <td>206.62</td>
+        <td>0.631</td>
+        <td>0.258</td>
+        <td>0</td>
+      </tr>
+      <tr>
+        <td>Co-NavGPT</td>
+        <td>185.43</td>
+        <td>0.666</td>
+        <td>0.388</td>
+        <td>0</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- Fire Condition Table -->
+  <table class="table is-bordered is-striped is-hoverable is-narrow is-fullwidth mt-4">
+    <caption class="has-text-centered is-size-7 mb-2">
+      <strong>Table 2.</strong> Performance comparison under fire conditions
+    </caption>
+    <thead>
+      <tr>
+        <th>Method</th>
+        <th>NS ↑</th>
+        <th>SR ↓</th>
+        <th>SPL ↓</th>
+        <th>CHE ↑</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Greedy</td>
+        <td>267.40</td>
+        <td>0.651</td>
+        <td>0.319</td>
+        <td>11.233</td>
+      </tr>
+      <tr>
+        <td>Cost-Utility</td>
+        <td>207.49</td>
+        <td>0.608</td>
+        <td>0.306</td>
+        <td>8.517</td>
+      </tr>
+      <tr>
+        <td>Random Sample</td>
+        <td>214.96</td>
+        <td>0.625</td>
+        <td>0.251</td>
+        <td>7.174</td>
+      </tr>
+      <tr>
+        <td>Co-NavGPT</td>
+        <td>187.89</td>
+        <td>0.660</td>
+        <td>0.381</td>
+        <td>4.873</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- Shared Caption -->
+  <figcaption class="has-text-centered is-size-7 mt-4">
+    We evaluate all methods using four metrics: Number of Steps (NS), Success Rate (SR),
+    Success weighted by Path Length (SPL), and Cumulative Hazard Exposure (CHE).
+    By comparing the performance across normal and fire scenarios, we observe substantial
+    performance degradation for existing approaches originally designed for clean indoor environments.
+    This highlights the critical need for robust multi-modal perception and hazard-aware planning
+    in fire-disaster response applications.
+  </figcaption>
+
+</figure>
+
 
 
     <!-- Degradation Analysis -->
