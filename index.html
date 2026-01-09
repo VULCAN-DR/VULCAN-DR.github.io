@@ -237,14 +237,26 @@
 <!-- Demo -->
 <section class="section">
   <div class="container is-max-desktop">
+
     <h2 class="title is-3 has-text-centered">
       Multi-Agent Cooperative Navigation under Normal and Fire Conditions
     </h2>
 
-    <p class="has-text-centered mb-5">
-      We qualitatively compare multi-agent navigation behaviors under normal and
-      fire-induced environments. The results highlight the impact of fire hazards
-      on individual agent perception and cooperative route planning.
+    <p class="has-text-centered mb-6">
+      We qualitatively compare multi-agent navigation behaviors under normal and fire-induced environments.
+      Different semantic targets are used as proxies for human presence, highlighting how fire hazards
+      affect individual perception and cooperative route planning.
+    </p>
+
+    <!-- ================================================= -->
+    <!-- Task I: Find a Bed (Proxy of Humans) -->
+    <!-- ================================================= -->
+    <h3 class="title is-4 has-text-centered mt-6">
+      Task I: Finding a Bed (Proxy of Humans)
+    </h3>
+
+    <p class="has-text-centered mb-5 is-size-6">
+      Beds are used as proxies for human locations in indoor rescue scenarios.
     </p>
 
     <div class="columns is-multiline">
@@ -252,7 +264,7 @@
       <!-- 第一行：Agent 0 -->
       <div class="column is-half">
         <video autoplay muted loop controls preload="metadata">
-          <source src="static/videos/no_fire_episode_4_rank_0_agent_0.mp4" type="video/mp4">
+          <source src="static/videos/episode_1_rank_0_agent_0.mp4" type="video/mp4">
         </video>
         <p class="has-text-centered is-size-7">
           Agent 0 View (Normal Environment)
@@ -261,7 +273,7 @@
 
       <div class="column is-half">
         <video autoplay muted loop controls preload="metadata">
-          <source src="static/videos/episode_4_rank_0_agent_0.mp4" type="video/mp4">
+          <source src="static/videos/episode_1_rank_0_agent_0_fire.mp4" type="video/mp4">
         </video>
         <p class="has-text-centered is-size-7">
           Agent 0 View (Fire Environment)
@@ -271,7 +283,7 @@
       <!-- 第二行：Agent 1 -->
       <div class="column is-half">
         <video autoplay muted loop controls preload="metadata">
-          <source src="static/videos/no_fire_episode_4_rank_0_agent_1.mp4" type="video/mp4">
+          <source src="static/videos/episode_1_rank_1_agent_1.mp4" type="video/mp4">
         </video>
         <p class="has-text-centered is-size-7">
           Agent 1 View (Normal Environment)
@@ -280,17 +292,17 @@
 
       <div class="column is-half">
         <video autoplay muted loop controls preload="metadata">
-          <source src="static/videos/episode_4_rank_0_agent_1.mp4" type="video/mp4">
+          <source src="static/videos/episode_1_rank_1_agent_1_fire.mp4" type="video/mp4">
         </video>
         <p class="has-text-centered is-size-7">
           Agent 1 View (Fire Environment)
         </p>
       </div>
 
-      <!-- 第三行：Cooperative Route Planning 对比 -->
+      <!-- 第三行：Cooperative Route Planning -->
       <div class="column is-half">
         <video autoplay muted loop controls preload="metadata">
-          <source src="static/videos/no_fire_episode_4_rank_0_merged.mp4" type="video/mp4">
+          <source src="static/videos/episode_1_rank_0_merged.mp4" type="video/mp4">
         </video>
         <p class="has-text-centered is-size-7">
           Cooperative Route Planning (Normal Environment)
@@ -299,7 +311,7 @@
 
       <div class="column is-half">
         <video autoplay muted loop controls preload="metadata">
-          <source src="static/videos/episode_4_rank_0_merged.mp4" type="video/mp4">
+          <source src="static/videos/episode_1_rank_0_merged_fire.mp4" type="video/mp4">
         </video>
         <p class="has-text-centered is-size-7">
           Cooperative Route Planning (Fire Environment)
@@ -308,12 +320,89 @@
 
     </div>
 
-    <p class="has-text-centered is-size-7 mt-4">
-      All experiments are conducted in the Habitat simulator. Open-vocabulary object detection and class-agnostic segmentation are implemented using YOLOv8 and Mobile-SAM, respectively.
-      For global coordination, a vision–language model (GPT-4o) assigns frontier goals based on the current multi-agent state. All experiments use two robots per episode with shared start positions but different initial orientations.
+    <!-- ================================================= -->
+    <!-- Task II: Find a Toilet (Proxy of Humans) -->
+    <!-- ================================================= -->
+    <h3 class="title is-4 has-text-centered mt-6">
+      Task II: Finding a Toilet (Proxy of Humans)
+    </h3>
+
+    <p class="has-text-centered mb-5 is-size-6">
+      Toilets serve as alternative proxies for human presence.
     </p>
+
+    <div class="columns is-multiline">
+
+      <!-- 第一行：Agent 0 -->
+      <div class="column is-half">
+        <video autoplay muted loop controls preload="metadata">
+          <source src="static/videos/episode_4_rank_0_agent_0.mp4" type="video/mp4">
+        </video>
+        <p class="has-text-centered is-size-7">
+          Agent 0 View (Normal Environment)
+        </p>
+      </div>
+
+      <div class="column is-half">
+        <video autoplay muted loop controls preload="metadata">
+          <source src="static/videos/episode_4_rank_0_agent_0_fire.mp4" type="video/mp4">
+        </video>
+        <p class="has-text-centered is-size-7">
+          Agent 0 View (Fire Environment)
+        </p>
+      </div>
+
+      <!-- 第二行：Agent 1 -->
+      <div class="column is-half">
+        <video autoplay muted loop controls preload="metadata">
+          <source src="static/videos/episode_4_rank_1_agent_1.mp4" type="video/mp4">
+        </video>
+        <p class="has-text-centered is-size-7">
+          Agent 1 View (Normal Environment)
+        </p>
+      </div>
+
+      <div class="column is-half">
+        <video autoplay muted loop controls preload="metadata">
+          <source src="static/videos/episode_4_rank_1_agent_1_fire.mp4" type="video/mp4">
+        </video>
+        <p class="has-text-centered is-size-7">
+          Agent 1 View (Fire Environment)
+        </p>
+      </div>
+
+      <!-- 第三行：Cooperative Route Planning -->
+      <div class="column is-half">
+        <video autoplay muted loop controls preload="metadata">
+          <source src="static/videos/episode_4_rank_0_merged.mp4" type="video/mp4">
+        </video>
+        <p class="has-text-centered is-size-7">
+          Cooperative Route Planning (Normal Environment)
+        </p>
+      </div>
+
+      <div class="column is-half">
+        <video autoplay muted loop controls preload="metadata">
+          <source src="static/videos/episode_4_rank_0_merged_fire.mp4" type="video/mp4">
+        </video>
+        <p class="has-text-centered is-size-7">
+          Cooperative Route Planning (Fire Environment)
+        </p>
+      </div>
+
+    </div>
+
+    <!-- Footer -->
+    <p class="has-text-centered is-size-7 mt-5">
+      All experiments are conducted in the Habitat simulator.
+      Open-vocabulary object detection and class-agnostic segmentation are implemented using YOLOv8 and Mobile-SAM.
+      A vision–language model (GPT-4o) assigns frontier goals based on the global multi-agent state.
+      Each episode involves two robots with shared start positions and different initial orientations.
+    </p>
+
   </div>
 </section>
+
 
 
 <!-- Evaluation -->
@@ -472,7 +561,7 @@
   </div>
 </section> -->
 
-<footer class="footer">
+<!-- <footer class="footer">
   <div class="container has-text-centered">
     <p>
       Built using the
@@ -481,7 +570,7 @@
       </a>.
     </p>
   </div>
-</footer>
+</footer> -->
 
 </body>
 </html>
